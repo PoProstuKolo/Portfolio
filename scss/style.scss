@@ -3,6 +3,7 @@
 body {
 	font-family: 'Montserrat', sans-serif;
 	background-color: #ebecf2;
+	position: relative;
 }
 
 hr {
@@ -324,6 +325,34 @@ hr {
 	}
 }
 
+// ******************SECTION - contact******************
+.contact {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	min-height: 25vh;
+	background-color: #fff;
+
+	.contact-list {
+		padding-bottom: 20px;
+
+		.contact-bold {
+			font-weight: bold;
+		}
+
+		.contact-item {
+			list-style-type: none;
+			font-size: 1.8rem;
+		}
+	}
+}
+
+// ******************FOOTER******************
+footer {
+	font-size: 1.8rem;
+}
+
 @media (min-width: 375px) {
 	.sidebar {
 		left: -100vw;
@@ -437,6 +466,19 @@ hr {
 			}
 		}
 	}
+
+	.services {
+		min-height: 90vh;
+		.services-group {
+			.services-box {
+				min-height: 390px;
+			}
+		}
+	}
+
+	footer {
+		font-size: 2rem;
+	}
 }
 
 @media (min-width: 1200px) {
@@ -455,6 +497,15 @@ hr {
 
 	main {
 		margin-left: 300px;
+	}
+
+	footer {
+		font-size: 1.2rem;
+		position: fixed;
+		bottom: 5px;
+		left: 50px;
+		color: white;
+		z-index: 13;
 	}
 
 	.about {

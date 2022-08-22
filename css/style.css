@@ -44,6 +44,7 @@ table {
 body {
   font-family: "Montserrat", sans-serif;
   background-color: #ebecf2;
+  position: relative;
 }
 
 hr {
@@ -310,6 +311,29 @@ hr {
   transform: scale(1.1);
 }
 
+.contact {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 25vh;
+  background-color: #fff;
+}
+.contact .contact-list {
+  padding-bottom: 20px;
+}
+.contact .contact-list .contact-bold {
+  font-weight: bold;
+}
+.contact .contact-list .contact-item {
+  list-style-type: none;
+  font-size: 1.8rem;
+}
+
+footer {
+  font-size: 1.8rem;
+}
+
 @media (min-width: 375px) {
   .sidebar {
     left: -100vw;
@@ -384,6 +408,15 @@ hr {
   .about .skills .skills-item {
     font-size: 1.9rem;
   }
+  .services {
+    min-height: 90vh;
+  }
+  .services .services-group .services-box {
+    min-height: 390px;
+  }
+  footer {
+    font-size: 2rem;
+  }
 }
 @media (min-width: 1200px) {
   .sidebar {
@@ -398,6 +431,14 @@ hr {
   }
   main {
     margin-left: 300px;
+  }
+  footer {
+    font-size: 1.2rem;
+    position: fixed;
+    bottom: 5px;
+    left: 50px;
+    color: white;
+    z-index: 13;
   }
   .about .pre-text {
     font-size: 1.6rem;
