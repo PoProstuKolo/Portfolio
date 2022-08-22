@@ -8,6 +8,7 @@
     <title>KołoDEV</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link href="./css/style.css" rel="stylesheet">
     <link
         href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic"
@@ -37,8 +38,8 @@
     <header class="home" id="home">
         <div class="home-shadow"></div>
         <div class="information-text">
-            <h2>Kacper "Koło" Kołaczyk</h2>
-            <p>I'm <span class="auto-type"></span></p>
+            <h2 data-aos="fade-up" data-aos-delay="150">Kacper "Koło" Kołaczyk</h2>
+            <p data-aos="fade-up" data-aos-delay="300">I'm <span class="auto-type"></span></p>
         </div>
         <div class="arrow">
             <a href="#about"><i class="fa-solid fa-circle-arrow-down"></i></a>
@@ -46,40 +47,24 @@
     </header>
     <main>
         <section class="about" id="about">
-            <div class="title-text pb-2">
+            <div class="title-text pb-2" data-aos="zoom-in" data-aos-delay="100">
                 <h2>About Me</h2>
                 <div class="underline"></div>
             </div>
             <div class="container text-center mt-5">
-                <h3 class="pre-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi odit excepturi cumque
-                    tempore.
-                    Voluptate reprehenderit dolores et excepturi libero placeat, quibusdam nostrum laborum eius, error
-                    commodi ratione enim tempora veniam.</h3>
-                <div class="row mt-5 d-flex align-items-center">
+                <h3 class="pre-text" data-aos="zoom-in" data-aos-delay="250">I'm Kacper Kołaczyk and I have been web
+                    development for 3 years. I do not treat it as my job, but as a passion. I attach the greatest
+                    importance to each project and correct the smallest detail. I try to make each of my clients as
+                    satisfied as possible</h3>
+                <div class="row mt-5 d-flex align-items-center" data-aos="zoom-in" data-aos-delay="400">
                     <div class="col-12 col-md-4 col-lg-6"><img src="https://unsplash.it/400/400" alt=""
                             class="img-fluid img-about"></div>
                     <div class="col-12 col-md-8 col-lg-6">
-                        <p class="about-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus
-                            non
-                            dolorem tempora perspiciatis exercitationem qui doloribus deserunt molestias? Incidunt
-                            commodi voluptatibus rerum deleniti minus! Architecto numquam assumenda possimus tempore
-                            facere labore error neque velit nostrum ipsum, sed ea blanditiis voluptates. Quo tempora
-                            perspiciatis, labore sint aspernatur optio. Neque sint placeat ipsum assumenda ea
-                            doloribus
-                            repudiandae, voluptas optio blanditiis sequi quos tempora vero deserunt atque. Vel nobis
-                            eligendi optio, placeat expedita nemo dignissimos! Tempora debitis enim sed ut iste qui
-                            distinctio, laudantium quas exercitationem, facilis repellendus deleniti tenetur in
-                            itaque
-                            aliquam voluptates necessitatibus quod adipisci aliquid expedita. Ipsum mollitia
-                            pariatur,
-                            accusamus assumenda reiciendis quod doloribus atque facere nesciunt maxime velit harum
-                            totam
-                            eveniet ad enim! In quisquam numquam ratione officiis aliquam quaerat minus distinctio
-                            iure
-                            voluptates id velit laboriosam debitis sunt cupiditate, inventore quia maxime voluptate
-                            at!
-                            Ex, quasi error nobis, vitae rerum inventore accusamus dignissimos, obcaecati blanditiis
-                            nostrum voluptate iste?</p>
+                        <p class="about-text">Apart from web development, I also deal with graphic design and video
+                            editing. That is why I am able to fully design and program your website without the need for
+                            outsiders. I will make every effort to the task entrusted to me so that you are satisfied
+                            with the results of my work, with the hope that we will continue to cooperate. I invite you
+                            to read the offer below and of course I look forward to hearing from you ;)</p>
                     </div>
                     <div class="skills bg-dark col-12">
                         <div class="container skills-container">
@@ -150,7 +135,7 @@
                 <h2>Services</h2>
                 <div class="underline"></div>
             </div>
-            <div class="container text-center">
+            <div class="container text-center" data-aos="zoom-in">
                 <div class="row services-group justify-content-center">
                     <div class="col-12 col-md-6 col-lg-4 p-5">
                         <div class="services-box">
@@ -265,6 +250,15 @@
             backSpeed: 100,
             loop: true
         })
+    </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            startEvent: 'DOMContentLoaded',
+            offset: 200,
+            once: true,
+        });
+
     </script>
     <script src="js/main.js"></script>
 
