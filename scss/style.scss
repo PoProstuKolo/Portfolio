@@ -61,9 +61,6 @@ hr {
 	}
 }
 
-.btn:focus {
-	box-shadow: none !important;
-}
 // ******************NAVBAR SIDEBAR******************
 .sidebar {
 	position: fixed;
@@ -266,12 +263,31 @@ hr {
 	background-position: center;
 	z-index: 0;
 
-	.portfolio-info {
+	.portfolio-item {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		position: relative;
+		background-color: #339900;
 		overflow: hidden;
+		z-index: 5;
 
-		.portfolio-text {
-			font-size: 2rem;
+		.img-portfolio {
+			min-width: 350px;
+			transition: transform 0.3s ease-in-out;
+			transform: translateY(-20%);
 		}
+	}
+
+	.portfolio-item::before {
+		content: 'SkyHype.pl - serwer minecraft';
+		z-index: 0;
+		font-weight: bold;
+		position: absolute;
+		font-size: 1.4rem;
+		bottom: 4%;
+		text-align: center;
+		width: 100%;
 	}
 }
 
@@ -522,6 +538,48 @@ footer {
 			.skills-item {
 				font-size: 1.8rem;
 			}
+		}
+	}
+
+	.services {
+		min-height: 70vh;
+	}
+
+	.portfolio {
+		background-color: #fff;
+		background-size: cover;
+		background-position: center;
+		z-index: 0;
+
+		.portfolio-item {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			position: relative;
+			background-color: #339900;
+			overflow: hidden;
+			z-index: 5;
+
+			.img-portfolio {
+				min-width: 350px;
+				transition: transform 0.3s ease-in-out;
+				transform: translateY(0);
+			}
+		}
+
+		.portfolio-item::before {
+			content: 'SkyHype.pl - serwer minecraft';
+			z-index: 0;
+			font-weight: bold;
+			position: absolute;
+			font-size: 1.4rem;
+			bottom: 4%;
+			text-align: center;
+			width: 100%;
+		}
+
+		.portfolio-item:hover .img-portfolio {
+			transform: translateY(-20%);
 		}
 	}
 }
