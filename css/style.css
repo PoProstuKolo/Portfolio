@@ -45,6 +45,7 @@ body {
   font-family: "Montserrat", sans-serif;
   background-color: #ebecf2;
   position: relative;
+  overflow-x: hidden;
 }
 
 hr {
@@ -447,7 +448,7 @@ footer {
     margin-left: 300px;
   }
   footer {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     position: fixed;
     bottom: 5px;
     left: 40px;
@@ -485,7 +486,8 @@ footer {
     z-index: 5;
   }
   .portfolio .portfolio-item .img-portfolio {
-    min-width: 350px;
+    min-width: 375px;
+    min-height: 200px;
     transition: transform 0.3s ease-in-out;
     transform: translateY(0);
   }
@@ -505,4 +507,21 @@ footer {
 }
 .sidebar-show {
   left: 0;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+::-webkit-scrollbar-track {
+  background: #888;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #555;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #339900;
 }/*# sourceMappingURL=style.css.map */
