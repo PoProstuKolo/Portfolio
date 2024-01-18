@@ -41,7 +41,8 @@ body {
   scroll-behavior: smooth;
   background-color: var(--dark);
   overflow-x: hidden;
-  height: 100vh;
+  min-height: 100vh;
+  width: 100vw;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -49,7 +50,7 @@ body {
 }
 
 .particles {
-  height: 99vh;
+  min-height: 99vh;
   position: absolute;
   top: 0;
   left: 0;
@@ -131,19 +132,19 @@ body {
   flex-direction: column;
 }
 .main__brand-title {
-  margin-top: 7em;
+  margin-top: 2em;
   margin-bottom: -0.75em;
   font-size: 5rem;
   text-transform: uppercase;
   font-weight: bold;
   color: var(--main);
-  text-shadow: 5px 5px 0px #050505;
+  text-shadow: 3px 3px 0px #050505;
   transform: skew(-10deg);
-  transition: transform 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
 }
-.main__brand-title:hover {
-  transform: skew(0);
-  text-shadow: 5px 5px 0px #0b6623;
+.main__brand-title--skills {
+  margin-top: 2.5em;
+  font-size: 3.25rem;
+  text-align: center;
 }
 .main__mine-img {
   margin-bottom: 3em;
@@ -203,33 +204,107 @@ body {
   position: absolute;
   content: "";
   bottom: 0;
-  left: 7.5%;
+  left: 52.5%;
   width: 0;
   height: 2px;
-  background-color: rgb(255, 255, 255);
+  background-color: var(--white);
+  transform: translate(-50%, -50%);
   transition: width 0.3s ease-in-out;
 }
 .main__item:hover::before {
   transform-origin: right;
-  width: 100%;
+  width: 50%;
 }
 .main__item:hover {
   cursor: pointer;
+}
+.main__active::after {
+  position: absolute;
+  content: "";
+  bottom: 0;
+  left: 52.5%;
+  width: 50%;
+  height: 2px;
+  background-color: var(--white);
+  transform: translate(-50%, -50%);
 }
 .main__icon {
   font-size: 2rem;
   color: var(--white);
   padding: 0em 0.5em;
 }
+.main .menu__btns {
+  margin-top: 6em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main .menu__btn {
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+.main .menu__sections .list {
+  margin: 1.5em 0em;
+  padding: 1.5em 1em;
+  background-color: var(--white);
+  border-radius: 15px;
+}
+.main .menu__sections .list__title {
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  font-weight: 800;
+  color: var(--black);
+}
+.main .menu__sections .list__list {
+  list-style-type: "> ";
+}
+.main .menu__sections .list__item {
+  color: var(--black);
+  font-size: 1.6rem;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+.main .menu__sections .card {
+  margin: 1.5em 0em;
+  padding: 1.5em 1em;
+  background-color: var(--white);
+  border-radius: 15px;
+}
+.main .menu__sections .card__title {
+  font-size: 1.8rem;
+  color: var(--black);
+  font-weight: bold;
+}
+.main .menu__sections .card__date {
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: var(--black);
+}
+.main .menu__sections .card__line {
+  height: 2px;
+  background-color: var(--black);
+  margin: 1em 0em;
+}
+.main .menu__sections .card__description {
+  color: var(--black);
+  font-size: 1.4rem;
+}
 
 @media (min-width: 320px) {
   /* … */
 }
 @media (min-width: 375px) {
-  /* … */
+  .main__brand-title {
+    margin-top: 8em;
+    margin-bottom: -0.5em;
+  }
 }
 @media (min-width: 414px) {
-  /* … */
+  .main__brand-title {
+    margin-top: 2.5em;
+    margin-bottom: 0em;
+  }
 }
 @media (min-width: 768px) {
   .btns {
@@ -257,5 +332,23 @@ body {
   .main__brand-title {
     margin-top: 0em;
     margin-bottom: 0em;
+  }
+  .main__item::before {
+    position: absolute;
+    content: "";
+    bottom: -5%;
+    left: 52.5%;
+  }
+  .main__item:hover::before {
+    transform-origin: right;
+    width: 100%;
+  }
+  .main__active::after {
+    bottom: -5%;
+    left: 55%;
+    width: 100%;
+  }
+  .main .menu__sections--knowledge {
+    width: 1000px;
   }
 }/*# sourceMappingURL=style.css.map */

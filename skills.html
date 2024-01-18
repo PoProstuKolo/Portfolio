@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Page-Enter" content="blendTrans(Duration=5)">
+    <meta http-equiv="Page-Exit" content="blendTrans(Duration=5)">
+    <title>KołoDEV - Portfolio</title>
+    <link rel="preconnect" href="https://rsms.me/">
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.css">
+
+    <script src="https://kit.fontawesome.com/0a3a019203.js" crossorigin="anonymous"></script>
+</head>
+
+<body data-theme="dark">
+    <div class="particles" id="particles-js"></div>
+    <div class="btns">
+        <div class="btns__languages">
+            <p><a href="index_pl.html" class="">pl</a> / <a aria-current="page" class="btns__active">eng</a></p>
+
+        </div>
+        <div class="btns__mode">
+            <button class="btns__btn btns__light-mode"><i class="fa-solid fa-sun"></i></button>
+            <button class="btns__btn btns__dark-mode btns__btn--active"><i class="fa-solid fa-moon"></i></button>
+        </div>
+    </div>
+    <main class="main main__skills">
+        <h1 class="main__brand-title main__brand-title--skills">skills and competences</h1>
+
+        <div class="menu">
+            <div class="container menu__btns">
+                <div class="row justify-content-evenly align-items-center gx-5 gy-3">
+                    <div class="col-12 col-md-6">
+                        <button data-id='first-section' onclick="showSection('first-section')"
+                            class="menu__btn px-5 py-3 btn btn-lg btn-success">knowledge</button>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <button data-id='second-section' onclick="showSection('second-section')"
+                            class="menu__btn px-5 py-3 btn btn-lg btn-outline-secondary">experiences
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+            <div class="container">
+                <div class="row menu__sections menu__sections--knowledge gx-5" id="first-section">
+                    <div class="col-12 list">
+                        <h2 class="list__title">FRONTEND</h2>
+                        <ul class="list__list">
+                            <li class="list__item">html</li>
+                            <li class="list__item">css</li>
+                            <li class="list__item">scss</li>
+                            <li class="list__item">js</li>
+                            <li class="list__item">bootstrap</li>
+                            <li class="list__item">tailwind</li>
+                            <li class="list__item">npm</li>
+                        </ul>
+                    </div>
+                    <div class="col-12 list">
+                        <h2 class="list__title">BACKEND</h2>
+                        <ul class="list__list">
+                            <li class="list__item">php</li>
+                            <li class="list__item">mysql</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row menu__sections menu__sections--experiences d-none" id="second-section">
+                    <div class="col-12 card">
+                        <h2 class="card__title">
+                            Kurs Tworzenia Stron WWW cz. I - HTML, CSS, RWD
+                        </h2>
+                        <p class="card__date">13.11.2023</p>
+                        <div class="card__line"></div>
+                        <p class="card__description">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Provident at recusandae, quos nesciunt et suscipit quas dolores possimus porro cum?</p>
+                    </div>
+                    <div class="col-12 card">
+                        <h2 class="card__title">
+                            Kurs Tworzenia Stron WWW cz. I - HTML, CSS, RWD
+                        </h2>
+                        <p class="card__date">13.11.2023</p>
+                        <div class="card__line"></div>
+                        <p class="card__description">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Provident at recusandae, quos nesciunt et suscipit quas dolores possimus porro cum?</p>
+                    </div>
+                    <div class="col-12 card">
+                        <h2 class="card__title">
+                            Kurs Tworzenia Stron WWW cz. I - HTML, CSS, RWD
+                        </h2>
+                        <p class="card__date">13.11.2023</p>
+                        <div class="card__line"></div>
+                        <p class="card__description">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Provident at recusandae, quos nesciunt et suscipit quas dolores possimus porro cum?</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container main__items">
+            <div class="main__item col-12 col-md-1 my-3 mb-5 my-md-0 mb-md-0 ">
+                <i class="fa-solid fa-chevron-right main__icon"></i><a href="./index.html">home</a>
+            </div>
+            <div class="main__item col-12 col-md-2 my-3 mb-5 my-md-0 mb-md-0 ">
+                <i class="fa-solid fa-chevron-right main__icon"></i><a href="./projects.html">projects</a>
+            </div>
+            <div class="main__item col-12 col-md-2 my-3 mb-5 my-md-0 mb-md-0 ">
+                <i class="fa-solid fa-chevron-right main__icon main__active"></i><a href="./skills.html">skills</a>
+            </div>
+            <div class="main__item col-12 col-md-2 my-3 mb-5 my-md-0 mb-md-0 ">
+                <i class="fa-solid fa-chevron-right main__icon"></i><a href="#">github</a>
+            </div>
+            <div class="main__item col-12 col-md-2 my-3 mb-5 my-md-0 mb-md-0 ">
+                <i class="fa-solid fa-chevron-right main__icon"></i><a href="./contact.html">contact</a>
+            </div>
+
+    </main>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <script type="text/javascript" src="./js/particles.js"></script>
+    <script type="text/javascript" src="./js/app.js"></script>
+    <script type="text/javascript" src="./js/main.js"></script>
+</body>
+
+</html>
+
+<!-- href="mailto:info@dunks1980.com?subject=Mail from dunks1980.com" -->
