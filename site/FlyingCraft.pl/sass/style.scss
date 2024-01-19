@@ -1,0 +1,421 @@
+@use './reset' as *;
+
+body {
+	font-family: 'Ubuntu', sans-serif;
+	background-color: rgb(8, 12, 10);
+	scroll-padding-top: 90px;
+}
+
+nav {
+	background-color: rgba(0, 0, 0, 0.75);
+
+	.navbar-brand {
+		img {
+			width: 64px;
+			transition: transform 0.3s ease-in-out;
+		}
+
+		img:hover {
+			transform: scale(1.1);
+		}
+	}
+	.navbar-nav {
+		.nav-link {
+			font-size: 1.8rem;
+			position: relative;
+			color: #aaa;
+			text-transform: uppercase;
+			font-weight: bold;
+			z-index: 5;
+		}
+
+		.nav-link:hover {
+			color: #fff;
+			z-index: 15;
+		}
+
+		.nav-link::after {
+			content: '';
+			position: absolute;
+			width: 100%;
+			left: 0;
+			bottom: 0;
+			// background: linear-gradient(45deg, rgba(2, 0, 36, 1) 0%, rgba(0, 61, 41, 1) 50%, rgba(0, 153, 103, 1) 100%);
+			background: #009967;
+			height: 0;
+			transition: all 0.3s ease-in-out;
+			z-index: 0;
+		}
+
+		.nav-link:hover:not(.active)::after {
+			height: 100%;
+			z-index: -5;
+		}
+
+		.nav-link:last-of-type::after {
+			height: 100%;
+			z-index: -5;
+		}
+
+		.nav-link:last-of-type:hover {
+			color: white;
+		}
+
+		.nav-link.active {
+			color: white;
+		}
+	}
+}
+
+header {
+	padding-top: 74px;
+	min-height: 100vh;
+	background-image: linear-gradient(
+			45deg,
+			rgba(1, 0, 17, 0.925) 0%,
+			rgba(0, 34, 23, 0.925) 50%,
+			rgba(0, 107, 71, 0.925) 100%
+		),
+		url(../img/5.png);
+	display: flex;
+	justify-content: center;
+	position: relative;
+
+	.container {
+		&__line {
+			width: 100%;
+			background: #009967;
+			height: 3px;
+		}
+
+		&__text {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			color: white;
+			padding: 35px;
+
+			span {
+				background: linear-gradient(43deg, rgba(0, 93, 63, 1) 0%, rgba(0, 153, 103, 1) 100%);
+				background-clip: text;
+				-webkit-background-clip: text;
+				color: transparent;
+			}
+
+			h2 {
+				font-size: 2.2rem;
+			}
+
+			p {
+				font-size: 1.8rem;
+				font-style: italic;
+				font-weight: light;
+			}
+
+			.button__header {
+				font-size: 1.5rem;
+				text-align: left;
+				min-width: 50%;
+
+				a {
+					color: #fff;
+					text-decoration: none;
+				}
+			}
+
+			.button__header:hover {
+				a {
+					color: #000;
+				}
+			}
+		}
+
+		&__player {
+			display: flex;
+			align-items: center;
+			img {
+				width: 115px;
+			}
+			padding-bottom: 75px;
+		}
+	}
+
+	.header__arrow {
+		position: absolute;
+		text-align: center;
+		color: white;
+		font-size: 3.5rem;
+		bottom: 5px;
+		transition: transform 0.3s;
+
+		a {
+			text-decoration: none;
+			color: white;
+			transition: color 0.3s;
+		}
+	}
+
+	.header__arrow:hover {
+		transform: scale(1.1);
+
+		a {
+			color: lime;
+		}
+	}
+}
+
+main {
+	.aboutus {
+		&__title {
+			text-align: center;
+			color: #009966;
+			text-shadow: 3px 3px 0 #000;
+
+			h1 {
+				font-size: 3rem;
+			}
+		}
+
+		&__underline {
+			background-color: #009966;
+			height: 2px;
+			width: 120px;
+			margin: auto;
+		}
+
+		&__text {
+			width: 80%;
+			display: flex;
+		}
+
+		&__right {
+			p {
+				font-size: 1.6rem;
+				color: rgb(168, 168, 168);
+				text-align: justify;
+			}
+		}
+	}
+
+	.whyus {
+		margin-top: 75px;
+
+		&__title {
+			text-align: center;
+			color: #009966;
+			text-shadow: 3px 3px 0 #000;
+			margin-bottom: 25px;
+
+			h1 {
+				font-size: 3rem;
+			}
+		}
+
+		&__underline {
+			background-color: #009966;
+			height: 2px;
+			width: 600px;
+			margin: auto;
+		}
+
+		&__examples {
+			.box {
+				transition: background-color 0.3s ease-in-out;
+				&__title {
+					display: flex;
+					i,
+					h2 {
+						font-size: 2.8rem;
+						text-transform: uppercase;
+						padding: 5px;
+						text-align: center;
+						color: #fff;
+						text-shadow: 2px 2px 0px #009967;
+					}
+				}
+
+				&__info {
+					p {
+						font-size: 1.6rem;
+						color: #ddd;
+						text-align: justify;
+					}
+				}
+			}
+
+			.box:hover {
+				background-color: #010f01;
+			}
+		}
+	}
+
+	.team {
+		margin-top: 75px;
+
+		&__title {
+			text-align: center;
+			color: #009966;
+			text-shadow: 3px 3px 0 #000;
+			margin-bottom: 25px;
+
+			h1 {
+				font-size: 3rem;
+			}
+		}
+
+		&__underline {
+			background-color: #009966;
+			height: 2px;
+			width: 600px;
+			margin: auto;
+		}
+
+		&__members {
+			.member {
+				background-color: rgba(0, 0, 0, 0.15);
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				transition: transform 0.3s ease-in-out;
+
+				&__left {
+					display: flex;
+					justify-content: center;
+				}
+
+				&__right {
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					flex-direction: column;
+
+					.title {
+						display: flex;
+						justify-content: center;
+						align-items: center;
+						flex-direction: column;
+						h2 {
+							font-size: 3rem;
+						}
+
+						&--ceo {
+							color: #0f0;
+							margin-top: 5px;
+						}
+						&--drunk {
+							margin-top: -5%;
+							color: #311111;
+						}
+						&--ha {
+							color: #0064ff;
+						}
+
+						&--admin {
+							color: #f00;
+						}
+
+						&--mod {
+							color: #009967;
+						}
+					}
+
+					.nickname {
+						p {
+							font-size: 2.2rem;
+							color: #fff;
+						}
+					}
+				}
+			}
+
+			.member:hover {
+				transform: scale(1.1);
+			}
+		}
+	}
+}
+
+footer {
+	background-color: rgba(0, 0, 0, 0.15);
+	margin-top: 50px;
+	margin-bottom: -5px;
+	padding: 5px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	color: rgba(255, 255, 255, 0.25);
+
+	h3 {
+		font-size: 1rem;
+	}
+
+	.ad {
+		color: white;
+	}
+}
+
+@media (min-width: 375px) {
+	header {
+		.container {
+			&__text {
+				h2 {
+					font-size: 2.6rem;
+				}
+			}
+			.button__header {
+				font-size: 1.9rem;
+				text-align: left;
+				min-width: 50%;
+			}
+
+			&__player {
+				img {
+					width: 175px;
+				}
+			}
+		}
+	}
+
+	footer {
+		h3 {
+			font-size: 1.2rem;
+		}
+	}
+}
+
+@media (min-width: 992px) {
+	header {
+		.container {
+			&__text {
+				h2 {
+					font-size: 5rem;
+				}
+
+				p {
+					font-size: 3rem;
+				}
+			}
+			.button__header {
+				font-size: 2.6rem;
+				text-align: left;
+				width: 75%;
+			}
+
+			&__player {
+				img {
+					width: 250px;
+				}
+			}
+		}
+	}
+
+	footer {
+		h3 {
+			font-size: 1.6rem;
+		}
+	}
+}
+
+@media (min-width: 1024px) {
+}

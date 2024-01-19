@@ -16,11 +16,11 @@
     <script src="https://kit.fontawesome.com/0a3a019203.js" crossorigin="anonymous"></script>
 </head>
 
-<body data-theme="dark">
+<body data-theme="dark" class="home">
     <div class="particles" id="particles-js"></div>
     <div class="btns">
         <div class="btns__languages">
-            <p><a href="index_pl.html" aria-current="page" class="btns__active">pl</a> / <a href="index.html">eng</a>
+            <p><a aria-current="page" class="btns__active">pl</a> / <a href="index.html">eng</a>
             </p>
 
         </div>
@@ -29,22 +29,35 @@
             <button class="btns__btn btns__dark-mode btns__btn--active"><i class="fa-solid fa-moon"></i></button>
         </div>
     </div>
-    <main>
-        <h1 class="brand">kołodev</h1>
-        <img src="./img/me.png" class="me">
-        <div class="container text-center">
-            <h2 class="welcome-title">Cześć, jestem <span class="author">kacper kołaczyk</span></h2>
-            <p class="description">Jestem front-end web developerem i chętnie pomogę Ci w Twojej stronowej sprawie!</p>
+    <main class="main">
+        <h1 class="main__brand-title">kołodev</h1>
+        <img src="./img/me.png" class="main__mine-img">
+        <div class="container text-center col-12">
+            <h2 class="main__title">Cześć, jestem <span class="main__author"> kacper kołaczyk</span>
+            </h2>
+            <p class="main__description">Jestem front-end developerem i z chęcią pomogę Ci z Twoją stronową sprawą!
+                Możesz mówić na mnie PoProstuKoło ;)</p>
         </div>
-        <div class="container items">
-            <div class="item">
-                <i class="fa-solid fa-chevron-right item__icon"></i><a href="#">projekty</a>
+        <div class="container main__items">
+            <div class="main__item col-12 col-md-1 my-3 mb-5 my-md-0 mb-md-0 ">
+                <i class="ms-1 fa-solid fa-chevron-right main__icon main__active"><a class="ms-3 main__item--link"
+                        href="./index_pl.html">strona główna</a></i>
             </div>
-            <div class="item">
-                <i class="fa-solid fa-chevron-right item__icon"></i><a href="#">github</a>
+            <div class="main__item col-12 col-md-1 my-3 mb-5 my-md-0 mb-md-0 ">
+                <i class="ms-1 fa-solid fa-chevron-right main__icon"><a class="ms-3 main__item--link"
+                        href="./projects_pl.html">projekty</a></i>
             </div>
-            <div class="item">
-                <i class="fa-solid fa-chevron-right item__icon"></i><a href="#">kontakt</a>
+            <div class="main__item col-12 col-md-1 my-3 mb-5 my-md-0 mb-md-0 ">
+                <i class="ms-1 fa-solid fa-chevron-right main__icon"><a class="ms-3 main__item--link"
+                        href="./skills_pl.html">moja wiedza</a></i>
+            </div>
+            <div class="main__item col-12 col-md-1 my-3 mb-5 my-md-0 mb-md-0 ">
+                <i class="ms-1 fa-solid fa-chevron-right main__icon"><a class="ms-3 main__item--link"
+                        href="https://github.com/PoProstuKolo" target="_blank" rel="noopener">github</a></i>
+            </div>
+            <div class="main__item col-12 col-md-1 my-3 mb-5 my-md-0 mb-md-0 ">
+                <i class="ms-1 fa-solid fa-chevron-right main__icon"><a class="ms-3 main__item--link"
+                        href="./contact.html">kontakt</a></i>
             </div>
 
         </div>
@@ -54,9 +67,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
-    <script src="./js/particles.js"></script>
-    <script src="./js/app.js"></script>
-    <script src="./js/main.js"></script>
+    <script type="text/javascript" src="./js/particles.js"></script>
+    <script type="text/javascript" src="./js/main.js"></script>
 </body>
 
 </html>

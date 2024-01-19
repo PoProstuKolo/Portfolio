@@ -1,0 +1,359 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+}
+
+input,
+button,
+textarea,
+select {
+  font-family: inherit;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+}
+
+textarea {
+  resize: vertical;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body {
+  font-family: "Ubuntu", sans-serif;
+  background-color: rgb(8, 12, 10);
+  scroll-padding-top: 90px;
+}
+
+nav {
+  background-color: rgba(0, 0, 0, 0.75);
+}
+nav .navbar-brand img {
+  width: 64px;
+  transition: transform 0.3s ease-in-out;
+}
+nav .navbar-brand img:hover {
+  transform: scale(1.1);
+}
+nav .navbar-nav .nav-link {
+  font-size: 1.8rem;
+  position: relative;
+  color: #aaa;
+  text-transform: uppercase;
+  font-weight: bold;
+  z-index: 5;
+}
+nav .navbar-nav .nav-link:hover {
+  color: #fff;
+  z-index: 15;
+}
+nav .navbar-nav .nav-link::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  background: #009967;
+  height: 0;
+  transition: all 0.3s ease-in-out;
+  z-index: 0;
+}
+nav .navbar-nav .nav-link:hover:not(.active)::after {
+  height: 100%;
+  z-index: -5;
+}
+nav .navbar-nav .nav-link:last-of-type::after {
+  height: 100%;
+  z-index: -5;
+}
+nav .navbar-nav .nav-link:last-of-type:hover {
+  color: white;
+}
+nav .navbar-nav .nav-link.active {
+  color: white;
+}
+
+header {
+  padding-top: 74px;
+  min-height: 100vh;
+  background-image: linear-gradient(45deg, rgba(1, 0, 17, 0.925) 0%, rgba(0, 34, 23, 0.925) 50%, rgba(0, 107, 71, 0.925) 100%), url(../img/5.png);
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+header .container__line {
+  width: 100%;
+  background: #009967;
+  height: 3px;
+}
+header .container__text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+  padding: 35px;
+}
+header .container__text span {
+  background: linear-gradient(43deg, rgb(0, 93, 63) 0%, rgb(0, 153, 103) 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+header .container__text h2 {
+  font-size: 2.2rem;
+}
+header .container__text p {
+  font-size: 1.8rem;
+  font-style: italic;
+  font-weight: light;
+}
+header .container__text .button__header {
+  font-size: 1.5rem;
+  text-align: left;
+  min-width: 50%;
+}
+header .container__text .button__header a {
+  color: #fff;
+  text-decoration: none;
+}
+header .container__text .button__header:hover a {
+  color: #000;
+}
+header .container__player {
+  display: flex;
+  align-items: center;
+  padding-bottom: 75px;
+}
+header .container__player img {
+  width: 115px;
+}
+header .header__arrow {
+  position: absolute;
+  text-align: center;
+  color: white;
+  font-size: 3.5rem;
+  bottom: 5px;
+  transition: transform 0.3s;
+}
+header .header__arrow a {
+  text-decoration: none;
+  color: white;
+  transition: color 0.3s;
+}
+header .header__arrow:hover {
+  transform: scale(1.1);
+}
+header .header__arrow:hover a {
+  color: lime;
+}
+
+main .aboutus__title {
+  text-align: center;
+  color: #009966;
+  text-shadow: 3px 3px 0 #000;
+}
+main .aboutus__title h1 {
+  font-size: 3rem;
+}
+main .aboutus__underline {
+  background-color: #009966;
+  height: 2px;
+  width: 120px;
+  margin: auto;
+}
+main .aboutus__text {
+  width: 80%;
+  display: flex;
+}
+main .aboutus__right p {
+  font-size: 1.6rem;
+  color: rgb(168, 168, 168);
+  text-align: justify;
+}
+main .whyus {
+  margin-top: 75px;
+}
+main .whyus__title {
+  text-align: center;
+  color: #009966;
+  text-shadow: 3px 3px 0 #000;
+  margin-bottom: 25px;
+}
+main .whyus__title h1 {
+  font-size: 3rem;
+}
+main .whyus__underline {
+  background-color: #009966;
+  height: 2px;
+  width: 600px;
+  margin: auto;
+}
+main .whyus__examples .box {
+  transition: background-color 0.3s ease-in-out;
+}
+main .whyus__examples .box__title {
+  display: flex;
+}
+main .whyus__examples .box__title i,
+main .whyus__examples .box__title h2 {
+  font-size: 2.8rem;
+  text-transform: uppercase;
+  padding: 5px;
+  text-align: center;
+  color: #fff;
+  text-shadow: 2px 2px 0px #009967;
+}
+main .whyus__examples .box__info p {
+  font-size: 1.6rem;
+  color: #ddd;
+  text-align: justify;
+}
+main .whyus__examples .box:hover {
+  background-color: #010f01;
+}
+main .team {
+  margin-top: 75px;
+}
+main .team__title {
+  text-align: center;
+  color: #009966;
+  text-shadow: 3px 3px 0 #000;
+  margin-bottom: 25px;
+}
+main .team__title h1 {
+  font-size: 3rem;
+}
+main .team__underline {
+  background-color: #009966;
+  height: 2px;
+  width: 600px;
+  margin: auto;
+}
+main .team__members .member {
+  background-color: rgba(0, 0, 0, 0.15);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease-in-out;
+}
+main .team__members .member__left {
+  display: flex;
+  justify-content: center;
+}
+main .team__members .member__right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+main .team__members .member__right .title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+main .team__members .member__right .title h2 {
+  font-size: 3rem;
+}
+main .team__members .member__right .title--ceo {
+  color: #0f0;
+  margin-top: 5px;
+}
+main .team__members .member__right .title--drunk {
+  margin-top: -5%;
+  color: #311111;
+}
+main .team__members .member__right .title--ha {
+  color: #0064ff;
+}
+main .team__members .member__right .title--admin {
+  color: #f00;
+}
+main .team__members .member__right .title--mod {
+  color: #009967;
+}
+main .team__members .member__right .nickname p {
+  font-size: 2.2rem;
+  color: #fff;
+}
+main .team__members .member:hover {
+  transform: scale(1.1);
+}
+
+footer {
+  background-color: rgba(0, 0, 0, 0.15);
+  margin-top: 50px;
+  margin-bottom: -5px;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: rgba(255, 255, 255, 0.25);
+}
+footer h3 {
+  font-size: 1rem;
+}
+footer .ad {
+  color: white;
+}
+
+@media (min-width: 375px) {
+  header .container__text h2 {
+    font-size: 2.6rem;
+  }
+  header .container .button__header {
+    font-size: 1.9rem;
+    text-align: left;
+    min-width: 50%;
+  }
+  header .container__player img {
+    width: 175px;
+  }
+  footer h3 {
+    font-size: 1.2rem;
+  }
+}
+@media (min-width: 992px) {
+  header .container__text h2 {
+    font-size: 5rem;
+  }
+  header .container__text p {
+    font-size: 3rem;
+  }
+  header .container .button__header {
+    font-size: 2.6rem;
+    text-align: left;
+    width: 75%;
+  }
+  header .container__player img {
+    width: 250px;
+  }
+  footer h3 {
+    font-size: 1.6rem;
+  }
+}/*# sourceMappingURL=style.css.map */
