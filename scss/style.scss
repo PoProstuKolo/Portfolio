@@ -501,14 +501,21 @@ body.home {
 	}
 }
 @media (min-width: 414px) {
+	body.home {
+		min-height: 100vh;
+		overflow-y: visible;
+	}
 	.main {
 		&__brand-title {
-			margin-top: 2.5em;
+			margin-top: 6em;
 			margin-bottom: 0em;
 		}
 	}
 }
 @media (min-width: 768px) {
+	body.home {
+		overflow-y: hidden;
+	}
 	.btns {
 		top: 2.5%;
 		right: 10%;
@@ -525,7 +532,6 @@ body.home {
 	}
 }
 @media (min-width: 992px) {
-	/* … */
 }
 @media (min-width: 1024px) {
 	/* … */
