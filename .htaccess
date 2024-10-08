@@ -1,0 +1,9 @@
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^home$ index.php [L]
+RewriteRule ^glowna$ index_pl.php [L]
+RewriteRule ^projects$ projects.php [L]
+RewriteRule ^projekty$ projects_pl.html [L]
+RewriteRule ^skills$ skills.html [L]
+RewriteRule ^umiejetnosci$ skills_pl.html [L]
